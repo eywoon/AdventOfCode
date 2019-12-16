@@ -47,16 +47,17 @@ public class Dec2 {
     public static void main(String[] args){
 
         int[] a = {1,9,10,3,2,3,11,0,99,30,40,50};
-        HashMap<Integer, Integer> program = new HashMap<Integer, Integer>();
+        HashMap<Integer, Integer> testProgram = new HashMap<Integer, Integer>();
 
         for(int i = 0; i < a.length; i++){
-            program.put(i, a[i]);
+            testProgram.put(i, a[i]);
         }
 
+        Map<Integer, Integer> program = ParseInput.parseTxtLineWithDelimeter("/Users/Eyrun/Dev/src/main/resources/dec2input.txt");
         //
-        opcode1(0,1,3, program);
+        opcode1(0,1,3, testProgram);
 
-        System.out.println(program.get(3));
+        System.out.println(testProgram.get(3));
 
     }
 }
